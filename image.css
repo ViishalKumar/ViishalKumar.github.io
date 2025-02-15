@@ -1,0 +1,14 @@
+.header-title {
+    display: flex;
+    align-items: center;   /* Aligns image and text vertically in the center */
+    justify-content: flex-start; /* Aligns the content to the left */
+}
+
+.header-img {
+    width: 100px;  /* Adjust the image size as needed */
+    margin-right: 10px; /* Adds space between the image and the text */
+}
+
+.header-text {
+    font-size: 2rem;  /* Adjust font size as needed */
+}

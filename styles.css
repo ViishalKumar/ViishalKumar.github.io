@@ -1,0 +1,66 @@
+body {
+    background-image: url(https://img.freepik.com/free-photo/spectrum-flashes-coloured-light_23-2151792456.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+h2 {
+    background-color: antiquewhite;
+    text-align: center;
+    
+}
+
+h1 {
+    color: black;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkred;
+}
+
+.home-link, .about-link, .year-link, .rtu-papers-link, .contact-link {
+    color: red;
+}
+
+h2 .year-dropdown, h2 .rtu-papers-dropdown {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+h2 .year-dropdown, h2 .rtu-papers-dropdown {
+    font-size: 20px;
+}
+
+.section-title, .year-title, .notes-title {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+table {
+    width: 30%;
+    text-align: center;
+    margin: 0.5%;
+}
+
+table img {
+    width: 400px;
+}
+
+table h1 {
+    font-size: large;
+}
+
+table td {
+    padding: 15px;
+}
