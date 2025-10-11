@@ -7,10 +7,11 @@
 }
 
 body {
-    background: linear-gradient(135deg, #f9f9ff, #d0e8ff, #c1f0f6);
-    color: #333;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
     line-height: 1.6;
     padding: 20px;
+    transition: background 1s;
 }
 
 /* Header */
@@ -23,25 +24,34 @@ body {
 }
 
 .header-img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 3px solid #ff6b81;
-    transition: transform 0.3s, border-color 0.3s;
+    border: 3px solid;
+    border-image: linear-gradient(45deg, #00fff7, #ff00ff, #ffea00, #00ff44) 1;
+    box-shadow: 0 0 20px #00fff7, 0 0 40px #ff00ff;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .header-img:hover {
-    transform: rotate(15deg) scale(1.1);
-    border-color: #ff9f43;
+    transform: rotate(15deg) scale(1.15);
+    box-shadow: 0 0 30px #ff00ff, 0 0 60px #ffea00;
 }
 
 .header-text {
     font-weight: bold;
-    font-size: 2.8rem;
-    background: linear-gradient(to right, #ff6b81, #ff9f43);
+    font-size: 3rem;
+    background: linear-gradient(90deg, #00fff7, #ff00ff, #ffea00, #00ff44);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #ff00ff;
+    animation: gradientText 5s ease infinite;
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Navbar */
@@ -57,48 +67,61 @@ body {
 .nav-link {
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 15px;
-    color: #fff;
+    padding: 10px 20px;
     border-radius: 50px;
-    background: linear-gradient(45deg, #ff6b81, #ff9f43);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(45deg, #00fff7, #ff00ff, #ffea00, #00ff44);
+    background-size: 300% 300%;
+    color: #111;
+    box-shadow: 0 0 15px #00fff7, 0 0 25px #ff00ff;
+    transition: all 0.3s ease-in-out;
+    animation: gradientMove 6s ease infinite;
 }
 
 .nav-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255,105,135,0.5);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 30px #00fff7, 0 0 50px #ff00ff;
 }
 
+/* Dropdowns */
 select {
-    padding: 6px 12px;
+    padding: 8px 14px;
     border-radius: 50px;
-    border: 2px solid #ff6b81;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #00fff7, #ff00ff, #ffea00, #00ff44) 1;
     font-size: 16px;
-    background: #fff;
-    color: #333;
-    transition: all 0.3s;
+    background: #111;
+    color: #fff;
+    box-shadow: 0 0 10px #00fff7, 0 0 20px #ff00ff;
+    transition: all 0.3s ease;
 }
 
 select:hover {
-    border-color: #ff9f43;
-    box-shadow: 0 0 8px rgba(255,159,67,0.5);
+    border-image: linear-gradient(45deg, #ff00ff, #00fff7, #00ff44, #ffea00) 1;
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #00fff7;
 }
 
 /* Section Titles */
 .section-header h2 {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin-bottom: 10px;
-    color: #ff6b81;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    background: linear-gradient(90deg, #00fff7, #ff00ff, #ffea00, #00ff44);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 5s ease infinite;
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #ff00ff;
 }
 
 .section-header h3 {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 500;
     margin-bottom: 40px;
-    color: #ff9f43;
+    background: linear-gradient(90deg, #ff00ff, #00fff7, #ffea00, #00ff44);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 5s ease infinite;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00fff7;
 }
 
 /* Cards */
@@ -106,46 +129,69 @@ select:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 .card {
-    background: linear-gradient(145deg, #ffffff, #f3f9ff);
+    background: #111;
     border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border: 4px solid;
+    border-image: linear-gradient(45deg, #00fff7, #ff00ff, #ffea00, #00ff44) 1;
+    box-shadow: 0 0 20px #00fff7, 0 0 30px #ff00ff;
     overflow: hidden;
     width: 280px;
     text-align: center;
-    transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
+    transition: transform 0.4s, box-shadow 0.4s, border-image 0.4s;
+    animation: borderGlow 6s linear infinite;
 }
 
 .card:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    background: linear-gradient(145deg, #fff0f5, #ffe8d6);
+    box-shadow: 0 0 50px #ff00ff, 0 0 60px #00fff7, 0 0 75px #ffea00;
 }
 
 .card img {
     width: 100%;
     height: auto;
     border-radius: 15px 15px 0 0;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card img:hover {
     transform: scale(1.08);
+    box-shadow: 0 0 25px #00fff7, 0 0 50px #ff00ff;
 }
 
 .card h3 {
     padding: 12px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    color: #ff6b81;
-    transition: color 0.3s;
+    background: linear-gradient(90deg, #00fff7, #ff00ff, #ffea00, #00ff44);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 5s ease infinite;
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #ff00ff;
 }
 
-.card h3:hover {
-    color: #ff9f43;
+/* Animations */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes borderGlow {
+    0% { border-image: linear-gradient(45deg, #00fff7, #ff00ff, #ffea00, #00ff44) 1; }
+    25% { border-image: linear-gradient(45deg, #ff00ff, #00fff7, #00ff44, #ffea00) 1; }
+    50% { border-image: linear-gradient(45deg, #ffea00, #00ff44, #00fff7, #ff00ff) 1; }
+    75% { border-image: linear-gradient(45deg, #00ff44, #ffea00, #ff00ff, #00fff7) 1; }
+    100% { border-image: linear-gradient(45deg, #00fff7, #ff00ff, #ffea00, #00ff44) 1; }
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Responsive */
