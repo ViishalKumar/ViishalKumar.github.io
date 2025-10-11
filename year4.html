@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DudeWhereIsMyNotes</title>
+    <link rel="icon" type="image/x-icon" href="file-SznvxGkWmvFBbT3cioSapD.webp">
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+     <script src="script.js"></script>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="file-SznvxGkWmvFBbT3cioSapD.webp" alt="Logo" class="header-img">
+            <h1 class="header-text">DudeWhereIsMyNotes</h1>
+        </div>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <a href="home.html" class="nav-link home">🏠 Home</a>
+            <a href="about.html" class="nav-link" target="_blank">🙋🏻‍♂ About</a>
+            <a href="Year.html" class="nav-link" target="_blank">📅Year</a>
+            <a href="RTU Papers.html" class="nav-link" target="_blank">📝 RTU Papers</a>
+            
+            
+
+            <a href="contact.html" class="nav-link contact" target="_blank">📞 Contact Us</a>
+        </nav>
+    </header>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #cce0ff, #e0f7ff);
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+      perspective: 1500px;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+      transform-style: preserve-3d;
+    }
+
+    .header-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+      animation: floatImg 3s ease-in-out infinite;
+    }
+
+    .header-img:hover {
+      transform: rotateY(25deg) rotateX(10deg) scale(1.2);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes floatImg {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .header-text {
+      font-weight: bold;
+      color: #062c69;
+      font-size: 3rem;
+      text-shadow: 0 0 10px #0a4f9c, 0 0 25px #00e0ff;
+      animation: glowText 2s infinite alternate;
+    }
+
+    @keyframes glowText {
+      0% {
+        text-shadow: 0 0 5px #0a4f9c;
+      }
+      50% {
+        text-shadow: 0 0 20px #00aaff, 0 0 35px #00e0ff;
+      }
+      100% {
+        text-shadow: 0 0 5px #0a4f9c;
+      }
+    }
+
+    /* Section Titles */
+    .section-header h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #0a4f9c;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .section-header h3 {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 40px;
+      animation: fadeInUp 1s ease 0.2s forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Subjects Section */
+    .subjects-section {
+      padding: 50px 20px;
+    }
+
+    .subjects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .subject-card {
+      background: linear-gradient(145deg, #ffffff, #e6f0ff);
+      border-radius: 20px;
+      width: 180px;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #0a4f9c;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, color 0.4s ease;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      animation: float 4s ease-in-out infinite;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .subject-card:hover {
+      transform: rotateY(10deg) rotateX(5deg) translateY(-10px);
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(145deg, #00aaff, #0a4f9c);
+      color: #fff;
+    }
+
+    .subject-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .subject-card:hover img {
+      transform: scale(1.2) rotate(10deg);
+      filter: drop-shadow(0 0 15px #00e0ff);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .subjects-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img src="file-SznvxGkWmvFBbT3cioSapD.webp" alt="Logo" class="header-img" />
+      <h1 class="header-text">4th Year Subjects</h1>
+    </div>
+  </header>
+
+  <!-- Subjects Section -->
+  <section class="subjects-section">
+    <div class="section-header">
+      <h2>Choose Your Subject</h2>
+      <h3>Access your final-year notes and resources</h3>
+    </div>
+
+    <div class="subjects-container">
+      <a href="project.html" class="subject-card">
+        <img src="project-icon.png" alt="Project Work" />
+        <span>Major Project</span>
+      </a>
+      <a href="ai-ml.html" class="subject-card">
+        <img src="ai-icon.png" alt="Advanced AI & ML" />
+        <span>Advanced AI & ML</span>
+      </a>
+      <a href="blockchain.html" class="subject-card">
+        <img src="blockchain-icon.png" alt="Blockchain Technology" />
+        <span>Blockchain Tech</span>
+      </a>
+      <a href="cloud.html" class="subject-card">
+        <img src="cloud-icon.png" alt="Cloud Architecture" />
+        <span>Cloud Architecture</span>
+      </a>
+      <a href="datasci.html" class="subject-card">
+        <img src="data-icon.png" alt="Data Science" />
+        <span>Data Science</span>
+      </a>
+      <a href="cyber.html" class="subject-card">
+        <img src="cyber-icon.png" alt="Cyber Forensics" />
+        <span>Cyber Forensics</span>
+      </a>
+      <a href="dl.html" class="subject-card">
+        <img src="dl-icon.png" alt="Deep Learning" />
+        <span>Deep Learning</span>
+      </a>
+      <a href="mobile.html" class="subject-card">
+        <img src="mobile-icon.png" alt="Mobile Computing" />
+        <span>Mobile Computing</span>
+      </a>
+      <a href="cloudsecurity.html" class="subject-card">
+        <img src="security-icon.png" alt="Cloud Security" />
+        <span>Cloud Security</span>
+      </a>
+      <a href="seminar.html" class="subject-card">
+        <img src="seminar-icon.png" alt="Seminar & Viva" />
+        <span>Seminar & Viva</span>
+      </a>
+    </div>
+  </section>
+</body>
+</html>
