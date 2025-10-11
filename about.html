@@ -92,6 +92,54 @@
         </div>
     </h2>
     <h2 style="font-size: xx-large; text-align: center;">About Us</h2>
+    <style>
+/* About Section CSS pasted here */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.about-card {
+    background: linear-gradient(145deg, #ffffff, #e6f0ff);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    animation: float 3s ease-in-out infinite;
+}
+
+.about-card:hover {
+    transform: rotateY(10deg) rotateX(5deg) translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.about-card h2 {
+    color: #0a4f9c;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+
     <section class="about-section">
     <div class="about-card">
         <h2>Our Mission</h2>
@@ -118,5 +166,6 @@
 </body>
 
 </html>
+
 
 
