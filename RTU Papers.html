@@ -109,7 +109,7 @@ body {
     justify-content: center;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     perspective: 1000px;
     animation: float 4s ease-in-out infinite;
 }
@@ -120,9 +120,15 @@ body {
 }
 
 .paper-card img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     margin-bottom: 15px;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.paper-card:hover img {
+    transform: scale(1.1) rotateY(10deg);
 }
 
 .paper-card h3 {
@@ -134,6 +140,24 @@ body {
 @keyframes float {
     0%,100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
+}
+
+/* Back button */
+.back-btn {
+    display: inline-block;
+    margin-top: 40px;
+    color: #fff;
+    background: linear-gradient(90deg, #0a4f9c, #00aaff);
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(10, 79, 156, 0.4);
 }
 
 /* Responsive */
@@ -163,25 +187,36 @@ body {
     </div>
 
     <div class="papers-container">
+        <!-- 1st Year -->
         <div class="paper-card" onclick="window.open('https://drive.google.com/drive/folders/1Heoic25amh1Kku6b0opRu0YstQ35SkOe','_blank')">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTci3CqqhWIq7MoNsX0xr69cmqAnzChSK25M5Ep0rtJlTh4XUaPCE5lzsiGi39MdpIh1mmjBf-QY-eiZNiJVPT-sia8JEFMZ-ZMF_Pl59zlS37esHrTm6Utd96XEgkNSdJKK2zPkqkR_I/s1600/Booklets_of_questions_%2528National_Center_Test_for_University_Admissions%2529.JPG" alt="1st Year">
-            <h3>1st Year</h3>
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="1st Year Question Paper">
+            <h3 style="color:#007bff;">1st Year</h3>
         </div>
+
+        <!-- 2nd Year -->
         <div class="paper-card" onclick="window.open('https://drive.google.com/drive/folders/1RKSjUFU51n--CwbxpE37HhvzXWHzpT-y','_blank')">
-            <img src="year2.png" alt="2nd Year">
-            <h3>2nd Year</h3>
+            <img src="https://cdn-icons-png.flaticon.com/512/2784/2784411.png" alt="2nd Year Question Paper">
+            <h3 style="color:#28a745;">2nd Year</h3>
         </div>
+
+        <!-- 3rd Year -->
         <div class="paper-card" onclick="window.open('https://drive.google.com/drive/folders/1xNAaVZbO6GkfwvQP_mdaahW_KrNOcAxO','_blank')">
-            <img src="year3.png" alt="3rd Year">
-            <h3>3rd Year</h3>
+            <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="3rd Year Question Paper">
+            <h3 style="color:#ffc107;">3rd Year</h3>
         </div>
+
+        <!-- 4th Year -->
         <div class="paper-card" onclick="window.open('https://drive.google.com/drive/folders/1AsL0rbKdiuOaccxSbnWDOdsNs_KrMvVg','_blank')">
-            <img src="year4.png" alt="4th Year">
-            <h3>4th Year</h3>
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" alt="4th Year Question Paper">
+            <h3 style="color:#dc3545;">4th Year</h3>
         </div>
     </div>
 </section>
-<h2><a href="index.html" class="back-btn">⬅ Back to Home</a></h2>
+
+<!-- Back Button -->
+<h2 style="text-align:center;">
+    <a href="index.html" class="back-btn">⬅ Back to Home</a>
+</h2>
 
 </body>
 </html>
