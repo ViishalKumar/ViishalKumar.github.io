@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RTU Papers - DudeWhereIsMyNotes</title>
+<link rel="icon" type="image/x-icon" href="file-SznvxGkWmvFBbT3cioSapD.webp">
+<style>
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f7ff, #cce0ff);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    perspective: 1500px;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    transform-style: preserve-3d;
+}
+
+.header-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    animation: floatImg 3s ease-in-out infinite;
+}
+
+.header-img:hover {
+    transform: rotateY(25deg) rotateX(10deg) scale(1.2);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+@keyframes floatImg {
+    0%,100% { transform: translateY(0px);}
+    50% { transform: translateY(-10px);}
+}
+
+.header-text {
+    font-weight: bold;
+    color: #0a4f9c;
+    font-size: 3rem;
+    text-shadow: 0 0 10px #0a4f9c, 0 0 20px #0a4f9c;
+    animation: glowText 2s infinite alternate;
+}
+
+@keyframes glowText {
+    0% { text-shadow: 0 0 5px #0a4f9c;}
+    50% { text-shadow: 0 0 20px #00aaff, 0 0 30px #00e0ff;}
+    100% { text-shadow: 0 0 5px #0a4f9c;}
+}
+
+/* Section Titles */
+.section-header h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #0a4f9c;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+.section-header h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* RTU Papers Cards */
+.papers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.paper-card {
+    background: linear-gradient(145deg, #ffffff, #e6f0ff);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.paper-card:hover {
+    transform: rotateY(10deg) rotateX(5deg) translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.paper-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.paper-card h3 {
+    color: #0a4f9c;
+    font-size: 1.3rem;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .papers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-container">
+        <img src="file-SznvxGkWmvFBbT3cioSapD.webp" alt="Logo" class="header-img">
+        <h1 class="header-text">RTU Papers</h1>
+    </div>
+</header>
+
+<!-- RTU Papers Section -->
+<section class="papers-section">
+    <div class="section-header">
+        <h2>RTU B-Tech Previous Papers</h2>
+        <h3>Select Your Year</h3>
+    </div>
+
+    <div class="papers-container">
+        <div class="paper-card" onclick="window.open('https://drive.google.com/drive/folders/1Heoic25amh1Kku6b0opRu0YstQ35SkOe','_blank')">
+            <img src="year1.png" alt="1st Year">
+            <h3>1st Year</h3>
+        </div>
+        <div class="paper-card" onclick="window.open('https://drive.google.com/drive/folders/1RKSjUFU51n--CwbxpE37HhvzXWHzpT-y','_blank')">
+            <img src="year2.png" alt="2nd Year">
+            <h3>2nd Year</h3>
+        </div>
+        <div class="paper-card" onclick="window.open('https://drive.google.com/drive/folders/1xNAaVZbO6GkfwvQP_mdaahW_KrNOcAxO','_blank')">
+            <img src="year3.png" alt="3rd Year">
+            <h3>3rd Year</h3>
+        </div>
+        <div class="paper-card" onclick="window.open('https://drive.google.com/drive/folders/1AsL0rbKdiuOaccxSbnWDOdsNs_KrMvVg','_blank')">
+            <img src="year4.png" alt="4th Year">
+            <h3>4th Year</h3>
+        </div>
+    </div>
+</section>
+<h2><a href="index.html" class="back-btn">⬅ Back to Home</a></h2>
+
+</body>
+</html>
