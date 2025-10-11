@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathematics - Chapters | DudeWhereIsMyNotes</title>
+<link rel="icon" type="image/x-icon" href="file-SznvxGkWmvFBbT3cioSapD.webp">
+<style>
+/* Reset & Base */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background: linear-gradient(135deg, #e0f7ff, #cce0ff);
+    color: #0a4f9c;
+    text-align: center;
+    padding: 40px 20px;
+    perspective: 1500px;
+}
+
+/* Header */
+h1 {
+    font-size: 2.8rem;
+    text-shadow: 0 0 10px #0a4f9c, 0 0 20px #00aaff;
+    margin-bottom: 40px;
+    animation: glowText 2s infinite alternate;
+}
+@keyframes glowText {
+    0% { text-shadow: 0 0 10px #0a4f9c; }
+    50% { text-shadow: 0 0 25px #00aaff, 0 0 35px #00e0ff; }
+    100% { text-shadow: 0 0 10px #0a4f9c; }
+}
+
+/* Chapter Cards Container */
+.chapter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Individual Card */
+.chapter-card {
+    background: linear-gradient(145deg, #ffffff, #e6f0ff);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 250px;
+    text-align: center;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+.chapter-card:hover {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+.chapter-card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+.chapter-card h3 {
+    padding: 15px;
+    color: #0a4f9c;
+    font-size: 1.3rem;
+}
+
+/* Back Button */
+a {
+    text-decoration: none;
+}
+.back-btn {
+    display: inline-block;
+    margin-top: 50px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(120deg, #0a4f9c, #00aaff);
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.back-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00e0ff;
+}
+</style>
+</head>
+<body>
+
+<h1>Mathematics – Chapters</h1>
+
+<div class="chapter-container">
+
+    <a href="maths-ch1.html" class="chapter-card">
+        <img src="maths1.jpg" alt="Chapter 1">
+        <h3>Chapter 1 – Limits & Continuity</h3>
+    </a>
+
+    <a href="maths-ch2.html" class="chapter-card">
+        <img src="maths2.jpg" alt="Chapter 2">
+        <h3>Chapter 2 – Differentiation</h3>
+    </a>
+
+    <a href="maths-ch3.html" class="chapter-card">
+        <img src="maths3.jpg" alt="Chapter 3">
+        <h3>Chapter 3 – Integration</h3>
+    </a>
+
+    <a href="maths-ch4.html" class="chapter-card">
+        <img src="maths4.jpg" alt="Chapter 4">
+        <h3>Chapter 4 – Matrices</h3>
+    </a>
+
+    <a href="maths-ch5.html" class="chapter-card">
+        <img src="maths5.jpg" alt="Chapter 5">
+        <h3>Chapter 5 – Differential Equations</h3>
+    </a>
+
+    <a href="maths-ch6.html" class="chapter-card">
+        <img src="maths6.jpg" alt="Chapter 6">
+        <h3>Chapter 6 – Vector Algebra</h3>
+    </a>
+
+    <a href="maths-ch7.html" class="chapter-card">
+        <img src="maths7.jpg" alt="Chapter 7">
+        <h3>Chapter 7 – Probability & Statistics</h3>
+    </a>
+
+    <a href="maths-ch8.html" class="chapter-card">
+        <img src="maths8.jpg" alt="Chapter 8">
+        <h3>Chapter 8 – Complex Numbers</h3>
+    </a>
+
+    <a href="maths-ch9.html" class="chapter-card">
+        <img src="maths9.jpg" alt="Chapter 9">
+        <h3>Chapter 9 – Laplace Transform</h3>
+    </a>
+
+    <a href="maths-ch10.html" class="chapter-card">
+        <img src="maths10.jpg" alt="Chapter 10">
+        <h3>Chapter 10 – Fourier Series</h3>
+    </a>
+
+</div>
+
+<a href="year1.html" class="back-btn">⬅ Back to 1st Year</a>
+
+</body>
+</html>
