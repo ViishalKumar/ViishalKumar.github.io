@@ -3,90 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - DudeWhereIsMyNotes</title>
     <link rel="icon" type="image/x-icon" href="file-SznvxGkWmvFBbT3cioSapD.webp">
-    <style>
-/* About Section CSS pasted here */
-.about-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    padding: 20px;
-    margin-top: 50px;
-}
+    <title>DudeWhereIsMyNotes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="image.css">
+    <script>
+        function redirectToDrive() {
+            var year = document.getElementById("yearDropdown").value;
+            
+            if (year === "year1") {
+                window.open("https://drive.google.com/drive/folders/1Heoic25amh1Kku6b0opRu0YstQ35SkOe", "_blank");
+            }
+            else if (year === "year2") {
+                window.open("https://drive.google.com/drive/folders/1RKSjUFU51n--CwbxpE37HhvzXWHzpT-y", "_blank");
+            }
+            else if (year === "year3") {
+                window.open("https://drive.google.com/drive/folders/1xNAaVZbO6GkfwvQP_mdaahW_KrNOcAxO", "_blank");
+            }
+            else if (year === "year4") {
+                  window.open("https://drive.google.com/drive/folders/1AsL0rbKdiuOaccxSbnWDOdsNs_KrMvVg", "_blank");
+            }
 
-.about-card {
-    background: linear-gradient(145deg, #ffffff, #e6f0ff);
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    padding: 25px;
-    max-width: 400px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    animation: float 3s ease-in-out infinite;
-}
+            }
+        
 
-.about-card:hover {
-    transform: rotateY(10deg) rotateX(5deg) translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-}
-
-.about-card h2 {
-    color: #0a4f9c;
-    margin-bottom: 15px;
-}
-
-.about-card p {
-    color: #333;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-</style>
-
+        function redirectToRTUPaper() {
+            var paper = document.getElementById("rtuPapers").value;
+            
+            if (paper === "1st year") {
+                window.open("https://drive.google.com/drive/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F?usp=sharing", "_blank");
+            }
+            else if (paper === "cs") {
+                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
+            } 
+            else if (paper === "civil") {
+                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
+            }
+            else if (paper === "ec") {
+                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
+            }
+            else if (paper === "ee") {
+                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
+            }
+            else if (paper === "it") {
+                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
+            }
+            else if (paper === "me") {
+                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
+            }
+            else if (paper === "imp") {
+                window.open("https://drive.google.com/drive/folders/1FIiSMun8HIA4ArBLXs9tgxtp1WW0I4Q2?usp=sharing", "_blank");
+            }
+            
+        }
+    </script>
 </head>
 <body>
-
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <img src="file-SznvxGkWmvFBbT3cioSapD.webp" alt="Logo" class="header-img">
-            <h1 class="header-text">About Us</h1>
+    <h2>
+        <strong><h1 class="header-title" >
+            <img src="file-SznvxGkWmvFBbT3cioSapD.webp" alt="404" class="header-img">
+            <span class="header-text">DudeWhereIsMyNotes</span>
+        </h1>
+        
+        </strong>
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🏠<a href="home.html" style="color: red;"><u>Home</u></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🙋🏻‍♂<u><a href="about.html" class="about-link" target="_blank"><u>About</u></a></u> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://drive.google.com/drive/folders/16zZ8agDwG6hYuxLn8blJ5u-qQj_GgPvr" style="color: red;" target="_blank"><u>⬇Year</u></a>
+            <select id="yearDropdown" style="font-size: 20px; margin-left: 10px;" onchange="redirectToDrive()">
+                <option value="year1">1st Year</option>
+                <option value="year2">2nd Year</option>
+                <option value="year3">3rd Year</option>
+                <option value="year4">4th Year</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📝<u><a href="https://drive.google.com/drive/folders/1OYe8SE2dVsm0etVv-t7EhLFLjY8-KwOB" class="rtu-papers-link" target="_blank"><u>RTU Papers</u></a></u>
+            <select id="rtuPapers" style="font-size: 20px; margin-left: 10px;" onchange="redirectToRTUPaper()">
+                <option value="1st year">1st year Paper</option>
+                <option value="cs">CS Paper</option>
+                <option value="civil">CIVIL Paper</option>
+                <option value="ec">EC Paper</option>
+                <option value="ee">EE Paper</option>
+                <option value="it">IT Paper</option>
+                <option value="me">ME Paper</option>
+                <option value="imp">IMPORTANT</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            📞<a href="contact.html" target="_blank" style="color: red;"><u>Contact Us</u></a>
         </div>
-    </header>
-
-    <!-- About Section -->
+    </h2>
+    <h2 style="font-size: xx-large; text-align: center;">About Us</h2>
     <section class="about-section">
-        <div class="about-card">
-            <h2>Our Mission</h2>
-            <p>We aim to provide students with easy access to notes, books, videos, and important resources for all years of engineering. Our goal is to make learning simple, efficient, and fun!</p>
-        </div>
+    <div class="about-card">
+        <h2>Our Mission</h2>
+        <p>We aim to provide students with easy access to notes, books, videos, and important resources for all years of engineering. Our goal is to make learning simple, efficient, and fun!</p>
+    </div>
 
-        <div class="about-card">
-            <h2>Who We Are</h2>
-            <p>We are a group of passionate learners who understand the struggle of finding quality study materials online. This platform is designed by students, for students, to help everyone excel in their studies.</p>
-        </div>
+    <div class="about-card">
+        <h2>Who We Are</h2>
+        <p>We are a group of passionate learners who understand the struggle of finding quality study materials online. This platform is designed by students, for students, to help everyone excel in their studies.</p>
+    </div>
 
-        <div class="about-card">
-            <h2>Our Vision</h2>
-            <p>To create a centralized hub of educational resources that empowers students to learn effectively, achieve better grades, and become confident engineers of tomorrow.</p>
-        </div>
+    <div class="about-card">
+        <h2>Our Vision</h2>
+        <p>To create a centralized hub of educational resources that empowers students to learn effectively, achieve better grades, and become confident engineers of tomorrow.</p>
+    </div>
 
-        <div class="about-card">
-            <h2>Connect With Us</h2>
-            <p>If you have suggestions, feedback, or want to contribute, reach out via our contact page. Together, we can make learning accessible and enjoyable!</p>
-        </div>
-    </section>
+    <div class="about-card">
+        <h2>Connect With Us</h2>
+        <p>If you have suggestions, feedback, or want to contribute, reach out via our contact page. Together, we can make learning accessible and enjoyable!</p>
+    </div>
+</section>
 
+   
 </body>
+
 </html>
+
 
