@@ -6,35 +6,7 @@
     <title>DudeWhereIsMyNotes</title>
     <link rel="icon" type="image/x-icon" href="file-SznvxGkWmvFBbT3cioSapD.webp">
     <link rel="stylesheet" href="styles.css">
-    <script>
-        const yearLinks = {
-            year1: "https://drive.google.com/drive/folders/1Heoic25amh1Kku6b0opRu0YstQ35SkOe",
-            year2: "https://drive.google.com/drive/folders/1RKSjUFU51n--CwbxpE37HhvzXWHzpT-y",
-            year3: "https://drive.google.com/drive/folders/1xNAaVZbO6GkfwvQP_mdaahW_KrNOcAxO",
-            year4: "https://drive.google.com/drive/folders/1AsL0rbKdiuOaccxSbnWDOdsNs_KrMvVg"
-        };
-
-        const paperLinks = {
-            "1st year": "https://drive.google.com/drive/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F?usp=sharing",
-            "cs": "https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F",
-            "civil": "https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F",
-            "ec": "https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F",
-            "ee": "https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F",
-            "it": "https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F",
-            "me": "https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F",
-            "imp": "https://drive.google.com/drive/folders/1FIiSMun8HIA4ArBLXs9tgxtp1WW0I4Q2?usp=sharing"
-        };
-
-        function redirectToDrive() {
-            const year = document.getElementById("yearDropdown").value;
-            if (yearLinks[year]) window.open(yearLinks[year], "_blank");
-        }
-
-        function redirectToRTUPaper() {
-            const paper = document.getElementById("rtuPapers").value;
-            if (paperLinks[paper]) window.open(paperLinks[paper], "_blank");
-        }
-    </script>
+   
 </head>
 <body>
      <script src="script.js"></script>
@@ -49,26 +21,10 @@
         <nav class="navbar">
             <a href="home.html" class="nav-link home">🏠 Home</a>
             <a href="about.html" class="nav-link" target="_blank">🙋🏻‍♂ About</a>
+            <a href="Year.html" class="nav-link" target="_blank">📅Year</a>
+            <a href="RTU Papers.html" class="nav-link" target="_blank">📝 RTU Papers</a>
             
-            <label for="yearDropdown" class="dropdown-label">⬇ Year</label>
-            <select id="yearDropdown" onchange="redirectToDrive()">
-                <option value="year1">1st Year</option>
-                <option value="year2">2nd Year</option>
-                <option value="year3">3rd Year</option>
-                <option value="year4">4th Year</option>
-            </select>
-
-            <label for="rtuPapers" class="dropdown-label">📝 RTU Papers</label>
-            <select id="rtuPapers" onchange="redirectToRTUPaper()">
-                <option value="1st year">1st year Paper</option>
-                <option value="cs">CS Paper</option>
-                <option value="civil">CIVIL Paper</option>
-                <option value="ec">EC Paper</option>
-                <option value="ee">EE Paper</option>
-                <option value="it">IT Paper</option>
-                <option value="me">ME Paper</option>
-                <option value="imp">IMPORTANT</option>
-            </select>
+            
 
             <a href="contact.html" class="nav-link contact" target="_blank">📞 Contact Us</a>
         </nav>
@@ -171,4 +127,3 @@
 
 </body>
 </html>
-
