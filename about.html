@@ -3,114 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - DudeWhereIsMyNotes</title>
     <link rel="icon" type="image/x-icon" href="file-SznvxGkWmvFBbT3cioSapD.webp">
-    <title>DudeWhereIsMyNotes</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="image.css">
-    <script>
-        function redirectToDrive() {
-            var year = document.getElementById("yearDropdown").value;
-            
-            if (year === "year1") {
-                window.open("https://drive.google.com/drive/folders/1Heoic25amh1Kku6b0opRu0YstQ35SkOe", "_blank");
-            }
-            else if (year === "year2") {
-                window.open("https://drive.google.com/drive/folders/1RKSjUFU51n--CwbxpE37HhvzXWHzpT-y", "_blank");
-            }
-            else if (year === "year3") {
-                window.open("https://drive.google.com/drive/folders/1xNAaVZbO6GkfwvQP_mdaahW_KrNOcAxO", "_blank");
-            }
-            else if (year === "year4") {
-                  window.open("https://drive.google.com/drive/folders/1AsL0rbKdiuOaccxSbnWDOdsNs_KrMvVg", "_blank");
-            }
-
-            }
-        
-
-        function redirectToRTUPaper() {
-            var paper = document.getElementById("rtuPapers").value;
-            
-            if (paper === "1st year") {
-                window.open("https://drive.google.com/drive/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F?usp=sharing", "_blank");
-            }
-            else if (paper === "cs") {
-                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
-            } 
-            else if (paper === "civil") {
-                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
-            }
-            else if (paper === "ec") {
-                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
-            }
-            else if (paper === "ee") {
-                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
-            }
-            else if (paper === "it") {
-                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
-            }
-            else if (paper === "me") {
-                window.open("https://drive.google.com/drive/u/1/folders/1k1iE9WQ6hhlS9WPXjXLdohDXdycp5o4F", "_blank");
-            }
-            else if (paper === "imp") {
-                window.open("https://drive.google.com/drive/folders/1FIiSMun8HIA4ArBLXs9tgxtp1WW0I4Q2?usp=sharing", "_blank");
-            }
-            
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-    </script>
+
+        body {
+            background: #111;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            perspective: 1000px; /* needed for 3D card tilt */
+        }
+
+        /* Header */
+        .header-container {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: glow 2s infinite alternate;
+        }
+
+        .header-img {
+            width: 90px;
+            border-radius: 50%;
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 15px #00ffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .header-img:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 0 25px #00ffff;
+        }
+
+        .header-text {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #00ffff;
+            margin-top: 10px;
+            text-shadow: 0 0 10px #00ffff;
+        }
+
+        /* Glow Animation */
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; }
+            50% { text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff; }
+            100% { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; }
+        }
+
+        /* About Section */
+        .about-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            padding: 20px;
+        }
+
+        /* Card Styling */
+        .about-card {
+            background: #1a1a1a;
+            border: 2px solid #00ffff;
+            border-radius: 15px;
+            padding: 25px;
+            max-width: 400px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0,255,255,0.2);
+            animation: float 3s ease-in-out infinite;
+            transform-style: preserve-3d; /* 3D effect */
+        }
+
+        .about-card:hover {
+            transform: rotateY(10deg) rotateX(5deg) translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,255,255,0.5);
+            border-color: #00ffff;
+        }
+
+        .about-card h2 {
+            color: #00ffff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px #00ffff;
+        }
+
+        .about-card p {
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Floating animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2>
-        <strong><h1 class="header-title" >
-            <img src="file-SznvxGkWmvFBbT3cioSapD.webp" alt="404" class="header-img">
-            <span class="header-text">DudeWhereIsMyNotes</span>
-        </h1>
-        
-        </strong>
-        <div>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🏠<a href="home.html" style="color: red;"><u>Home</u></a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🙋🏻‍♂<u><a href="about.html" class="about-link" target="_blank"><u>About</u></a></u> 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://drive.google.com/drive/folders/16zZ8agDwG6hYuxLn8blJ5u-qQj_GgPvr" style="color: red;" target="_blank"><u>⬇Year</u></a>
-            <select id="yearDropdown" style="font-size: 20px; margin-left: 10px;" onchange="redirectToDrive()">
-                <option value="year1">1st Year</option>
-                <option value="year2">2nd Year</option>
-                <option value="year3">3rd Year</option>
-                <option value="year4">4th Year</option>
-            </select>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📝<u><a href="https://drive.google.com/drive/folders/1OYe8SE2dVsm0etVv-t7EhLFLjY8-KwOB" class="rtu-papers-link" target="_blank"><u>RTU Papers</u></a></u>
-            <select id="rtuPapers" style="font-size: 20px; margin-left: 10px;" onchange="redirectToRTUPaper()">
-                <option value="1st year">1st year Paper</option>
-                <option value="cs">CS Paper</option>
-                <option value="civil">CIVIL Paper</option>
-                <option value="ec">EC Paper</option>
-                <option value="ee">EE Paper</option>
-                <option value="it">IT Paper</option>
-                <option value="me">ME Paper</option>
-                <option value="imp">IMPORTANT</option>
-            </select>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            📞<a href="contact.html" target="_blank" style="color: red;"><u>Contact Us</u></a>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="file-SznvxGkWmvFBbT3cioSapD.webp" alt="Logo" class="header-img">
+            <h1 class="header-text">About Us</h1>
         </div>
-    </h2>
-    <h2 style="font-size: xx-large; text-align: center;">About Us</h2>
-    <div class="about-section" style="padding: 30px; text-align: center; font-size: 20px; background-color: #f9f9f9; border-radius: 8px; margin-top: 20px;">
-        <p>Welcome to <strong>DudeWhereIsMyNotes</strong>! We are your go-to platform for accessing study materials, notes, books, and videos for B-tech students at RTU (Rajasthan Technical University). Whether you're in your first year or final year, we have a wide range of resources to help you succeed in your academic journey.</p>
-        <p>Our goal is to make learning easy by providing easy access to resources for various subjects like Engineering Mathematics, Physics, Chemistry, Programming, Communication Skills, and many others!</p>
-        <p>If you need help finding something, feel free to reach out to us!</p>
-    </div>
+    </header>
 
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-card">
+            <h2>Our Mission</h2>
+            <p>We aim to provide students with easy access to notes, books, videos, and important resources for all years of engineering. Our goal is to make learning simple, efficient, and fun!</p>
+        </div>
 
+        <div class="about-card">
+            <h2>Who We Are</h2>
+            <p>We are a group of passionate learners who understand the struggle of finding quality study materials online. This platform is designed by students, for students, to help everyone excel in their studies.</p>
+        </div>
 
-    <div class="about-image" style="text-align: center; margin-top: 20px;">
-        <h2>Founder</h2>
-        
-        <figure style="display: inline-block; margin-right: 20px;">
-            <img src="WhatsApp Image 2025-02-13 at 11.09.35_538fb748p (2).jpg" alt="Image 1" style="width: 300px; height: auto; border-radius: 8px;" />
-            <figcaption><h2>Vishal Kumar</h2></figcaption>
-        </figure>
-    
-        
-    </div>
+        <div class="about-card">
+            <h2>Our Vision</h2>
+            <p>To create a centralized hub of educational resources that empowers students to learn effectively, achieve better grades, and become confident engineers of tomorrow.</p>
+        </div>
+
+        <div class="about-card">
+            <h2>Connect With Us</h2>
+            <p>If you have suggestions, feedback, or want to contribute, reach out via our contact page. Together, we can make learning accessible and enjoyable!</p>
+        </div>
+    </section>
+
 </body>
-
 </html>
-
